@@ -17,5 +17,4 @@ RUN install_packages ca-certificates wget ansible \
     && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 USER 1001
-ENTRYPOINT [ "kubectl" ]
-CMD [ "--help" ]
+ENTRYPOINT ["/bin/bash"]
