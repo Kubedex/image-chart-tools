@@ -16,4 +16,4 @@ RUN install_packages ca-certificates wget ansible \
     && chmod +x -R /usr/local/bin \
     && apt-get autoremove -y && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-c"]
